@@ -1,0 +1,8 @@
+<!-- Galaxy Camera (WiFi?) -->
+<deviceProfile>
+
+	<maxPictureHeight>
+3072
+	</maxPictureHeight>
+
+</deviceProfile><!-- From: file:/C:/Users/343076/AndroidstudioProjects/SlidingMenu/camera/src/main/res/xml/cwac_camera_profile_samsung_gd1wifiue.xml -->

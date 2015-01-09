@@ -1,0 +1,8 @@
+<!-- HTC One -->
+<deviceProfile>
+
+	<maxPictureHeight>
+1400
+	</maxPictureHeight>
+
+</deviceProfile><!-- From: file:/C:/Users/343076/AndroidstudioProjects/SlidingMenu/camera/src/main/res/xml/cwac_camera_profile_htc_m7.xml -->

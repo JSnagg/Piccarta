@@ -1,0 +1,6 @@
+C:\Users\343076\AndroidstudioProjects\SlidingMenu\slidingMenu\build\intermediates\classes\debug
+C:\Users\343076\AndroidstudioProjects\SlidingMenu\slidingMenu\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-c69698339c18424a79eda5bf12c2c51fbaa41730.jar
+C:\Users\343076\AndroidstudioProjects\SlidingMenu\slidingMenu\build\intermediates\pre-dexed\debug\classes-abc9414011375027279f774a0e9319b59648dc73.jar
+C:\Users\343076\AndroidstudioProjects\SlidingMenu\slidingMenu\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-466dd4c2a4a1c41d6a31652c3453e6fff013490a.jar
+C:\Users\343076\AndroidstudioProjects\SlidingMenu\slidingMenu\build\intermediates\pre-dexed\debug\classes-dc1a8362e89ab4b2c759b240ded1a3806b073fed.jar
+C:\Users\343076\AndroidstudioProjects\SlidingMenu\slidingMenu\build\intermediates\pre-dexed\debug\classes-b05a1ce0c0dd3473a721a0f97a3d67457b005b99.jar
