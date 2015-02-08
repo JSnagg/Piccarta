@@ -2,39 +2,39 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\343076\AndroidstudioProjects\SlidingMenu\slidingMenu\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\libs\internal_impl-21.0.0.jar"
+        jar="D:\Portable Studio\SlidingMenu\slidingMenu\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\libs\internal_impl-21.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
-        <dex dex="C:\Users\343076\AndroidstudioProjects\SlidingMenu\slidingMenu\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-466dd4c2a4a1c41d6a31652c3453e6fff013490a.jar" />
+        <dex dex="D:\Portable Studio\SlidingMenu\slidingMenu\build\intermediates\pre-dexed\release\internal_impl-21.0.0-c9a2031b4d18205af052e5d89e32edb71fb800b6.jar" />
     </item>
     <item
-        jar="C:\Users\343076\AndroidstudioProjects\SlidingMenu\slidingMenu\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\classes.jar"
+        jar="D:\Portable Studio\SlidingMenu\slidingMenu\build\intermediates\exploded-aar\SlidingMenu\camera\unspecified\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="686344a780033e4ba22b926cd225f8d4941247e6">
-        <dex dex="C:\Users\343076\AndroidstudioProjects\SlidingMenu\slidingMenu\build\intermediates\pre-dexed\debug\classes-dc1a8362e89ab4b2c759b240ded1a3806b073fed.jar" />
+        sha1="c6a3f1d2e20a80233f47a801285ceaed55f1e3c1">
+        <dex dex="D:\Portable Studio\SlidingMenu\slidingMenu\build\intermediates\pre-dexed\release\classes-5e36a379698060750f18c4a713e99541e5d3444c.jar" />
     </item>
     <item
-        jar="C:\Users\343076\AndroidstudioProjects\SlidingMenu\slidingMenu\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.5.87\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
-        <dex dex="C:\Users\343076\AndroidstudioProjects\SlidingMenu\slidingMenu\build\intermediates\pre-dexed\debug\classes-b05a1ce0c0dd3473a721a0f97a3d67457b005b99.jar" />
-    </item>
-    <item
-        jar="C:\Users\343076\AndroidstudioProjects\SlidingMenu\slidingMenu\build\intermediates\exploded-aar\SlidingMenu\camera\unspecified\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="f1ec88592f6571c98012d49d11d6e8b9279cf458">
-        <dex dex="C:\Users\343076\AndroidstudioProjects\SlidingMenu\slidingMenu\build\intermediates\pre-dexed\debug\classes-abc9414011375027279f774a0e9319b59648dc73.jar" />
-    </item>
-    <item
-        jar="C:\Users\343076\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.0\support-annotations-21.0.0.jar"
+        jar="D:\Portable Studio\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.0\support-annotations-21.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
-        <dex dex="C:\Users\343076\AndroidstudioProjects\SlidingMenu\slidingMenu\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-c69698339c18424a79eda5bf12c2c51fbaa41730.jar" />
+        <dex dex="D:\Portable Studio\SlidingMenu\slidingMenu\build\intermediates\pre-dexed\release\support-annotations-21.0.0-605bc8c26f19871283a57e6b10756e73a899bdb8.jar" />
+    </item>
+    <item
+        jar="D:\Portable Studio\SlidingMenu\slidingMenu\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6">
+        <dex dex="D:\Portable Studio\SlidingMenu\slidingMenu\build\intermediates\pre-dexed\release\classes-906d5012ad7ded6416da73d020b9d3cc8785d5ec.jar" />
+    </item>
+    <item
+        jar="D:\Portable Studio\SlidingMenu\slidingMenu\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.5.87\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="D:\Portable Studio\SlidingMenu\slidingMenu\build\intermediates\pre-dexed\release\classes-08c7249b34e29c4b50b8d5d59db2aad690940583.jar" />
     </item>
 
 </items>

@@ -255,18 +255,27 @@ public class MyCameraHost implements CameraHost {
 	    canvas.drawBitmap(image1, new Matrix(), null);
 	    canvas.drawBitmap(image2, 0, 0, null);
 
-		  ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-		  bmOverlay.compress(Bitmap.CompressFormat.JPEG, 40, bytes);
-		  File f = new File(Environment.getExternalStorageDirectory() + File.separator + "photo3.jpg");
-		  try {
-			f.createNewFile();
-	  	  FileOutputStream fo = new FileOutputStream(f);
-	  	  fo.write(bytes.toByteArray()); 
-	  	  fo.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+		bmOverlay.compress(Bitmap.CompressFormat.JPEG, 40, bytes);
+
+
+        File folder = new File(Environment.getExternalStorageDirectory() + "/piccarta"); // Create a folder for the final images
+        boolean success = true;
+        if (!folder.exists()) {
+           success = folder.mkdir();
+        }
+        if(success) {
+            File f = new File(Environment.getExternalStorageDirectory() + "/piccarta" + File.separator + getPhotoFileName2()); // Save the file
+            try {
+                f.createNewFile();
+                FileOutputStream fo = new FileOutputStream(f);
+                fo.write(bytes.toByteArray());
+                fo.close();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
   }
 
   @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
@@ -353,6 +362,12 @@ public class MyCameraHost implements CameraHost {
 
     //return("Photo_" + ts + ".jpg");
     return("photo1.jpg");
+  }
+
+
+  protected String getPhotoFileName2() {
+      String ts = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(new Date());
+      return ("Photo_" + ts + ".jpg");
   }
 
   protected File getVideoPath() {

@@ -13,6 +13,8 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.Point;
+import android.graphics.RectF;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.Display;
@@ -80,21 +82,31 @@ public class TheCameraFragment extends CameraFragment
             	  iv.buildDrawingCache();
             	  bitmap = iv.getDrawingCache();
             	  bitmap = makeTransparent(bitmap,newVal);
-            	
-            	  
-            	  
+
             	  Matrix matrix = new Matrix();
-            	  Display display = ((WindowManager) getActivity().getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
-            	  int rotation = display.getRotation();
-            	  matrix.postRotate(rotation);
-            	  rotated = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
-            	  
+            	  // Display display = ((WindowManager) getActivity().getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+            	  // int rotation = display.getRotation();
+            	  // matrix.postRotate(rotation);
+
+
+                  //Display display = ((WindowManager) getActivity().getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+                  //Point size = new Point();
+                  //display.getSize(size);
+                  //int width = size.x;
+                  //int height = size.y;
+
+                  // 1200 x 1662
+            	  ///rotated = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+                  matrix.setRectToRect(new RectF(0, 0, bitmap.getWidth(), bitmap.getHeight()), new RectF(0, 0, 1944, 2592), Matrix.ScaleToFit.FILL);
+                  //rotated = Bitmap.createBitmap(bitmap);
+                  rotated = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+
             	  //content.setDrawingCacheEnabled(true);
             	  //bitmap = Bitmap.createBitmap(content.getDrawingCache());
             	  content.setDrawingCacheEnabled(false);
             	  
             	  ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-            	  rotated.compress(Bitmap.CompressFormat.PNG, 40, bytes);
+                  rotated.compress(Bitmap.CompressFormat.PNG, 40, bytes);
             	  File f = new File(Environment.getExternalStorageDirectory() + File.separator + "photo2.png");
             	  try {
 					f.createNewFile();
@@ -107,8 +119,6 @@ public class TheCameraFragment extends CameraFragment
             	  
 
             	  test.overlayImage = rotated;
-            	  
-            	  
             	  PictureTransaction xact = new PictureTransaction(test);
             	  takePicture(xact);
             	  Toast.makeText(getActivity(), "Picture Taken", Toast.LENGTH_LONG).show();
