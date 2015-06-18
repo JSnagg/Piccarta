@@ -10,9 +10,13 @@ import info.androidhive.slidingmenu.adapter.NavDrawerListAdapter;
 import info.androidhive.slidingmenu.model.NavDrawerItem;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.net.URLConnection;
+import java.net.URL;
+import java.net.MalformedURLException;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -35,6 +39,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 @SuppressLint("NewApi")
 public class MainActivity extends Activity  implements CameraHostProvider{
@@ -76,7 +81,8 @@ public class MainActivity extends Activity  implements CameraHostProvider{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
         createDrawer();
-		if (savedInstanceState == null) {
+
+    if (savedInstanceState == null) {
 			// on first time display view for first nav item
             initializeMap = true;
 

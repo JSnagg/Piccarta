@@ -249,11 +249,12 @@ public class MyCameraHost implements CameraHost {
 	    
 	    Bitmap image1 = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory() + File.separator + "photo1.jpg");
 	    Bitmap image2 = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory() + File.separator + "photo2.png");
+        Bitmap resizedbitmap = Bitmap.createScaledBitmap(image2, image1.getWidth(), image1.getHeight(), true);
 	    
 	    Bitmap bmOverlay = Bitmap.createBitmap(image1.getWidth(), image1.getHeight(), image1.getConfig());
 	    Canvas canvas = new Canvas(bmOverlay);
 	    canvas.drawBitmap(image1, new Matrix(), null);
-	    canvas.drawBitmap(image2, 0, 0, null);
+	    canvas.drawBitmap(resizedbitmap, 0, 0, null);
 
 		ByteArrayOutputStream bytes = new ByteArrayOutputStream();
 		bmOverlay.compress(Bitmap.CompressFormat.JPEG, 40, bytes);

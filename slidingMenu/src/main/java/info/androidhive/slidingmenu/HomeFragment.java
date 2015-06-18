@@ -13,6 +13,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.HttpURLConnection;
 
 public class HomeFragment extends Fragment {
 	View rootView;
@@ -47,7 +54,26 @@ public class HomeFragment extends Fragment {
 		LatLng pos = new LatLng(43.658039, -79.377643);
 		map.moveCamera(CameraUpdateFactory.newLatLngZoom(pos, 18));
 		map.addMarker(new MarkerOptions().title("Put Tag Here").snippet("Put Description Here").position(pos).draggable(true));
-		
+
+
+        try {
+            String urlString = "http://serv-piccarta.rhcloud.com/login.php?username=julian2&password=julian2";
+            URL url = new URL(urlString.toString());
+            try {
+                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+
+                Toast.makeText(getActivity(), "Logged in", Toast.LENGTH_LONG).show();
+            } catch (IOException i){
+               //System.out.println(i.getMessage());
+                Toast.makeText(getActivity(), "Unable to log in", Toast.LENGTH_LONG).show();
+            }
+        } catch (MalformedURLException e) {
+            //System.out.println("The URL is not valid.");
+            //System.out.println(e.getMessage());
+            Toast.makeText(getActivity(), "Unable to log in", Toast.LENGTH_LONG).show();
+        }
+
+
         return rootView;
     }
 	
